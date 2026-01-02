@@ -1,0 +1,49 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+venv/
+env/
+ENV/
+.venv
+pip-log.txt
+pip-delete-this-directory.txt
+
+# Environment variables
+.env
+
+# Codebase (users clone separately)
+gemini-cli/
+
+# Byterover
+.brv/
+
+# Qdrant data
+qdrant_storage/
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.DS_Store
+
+# Model cache
+.cache/
+transformers_cache/
+
+# Logs
+*.log
+
+# Temporary files
+*.tmp
+*.temp
+
+# Blog post
+blogpost.md
+
+# Claude
+CLAUDE.md

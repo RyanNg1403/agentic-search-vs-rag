@@ -1,0 +1,341 @@
+{
+  "metadata": {
+    "codebase": "gemini-cli",
+    "repository": "https://github.com/google-gemini/gemini-cli.git",
+    "total_questions": 30,
+    "question_types": {
+      "direct": 8,
+      "dependency": 8,
+      "feature": 8,
+      "refactoring": 6
+    }
+  },
+  "questions": [
+    {
+      "id": "q1",
+      "type": "direct",
+      "question": "Where is the OAuth2 authentication flow implemented?",
+      "ground_truth": [
+        "packages/core/src/code_assist/oauth2.ts"
+      ]
+    },
+    {
+      "id": "q2",
+      "type": "direct",
+      "question": "Which file contains the main CLI entry point with React/Ink rendering?",
+      "ground_truth": [
+        "packages/cli/src/gemini.tsx"
+      ]
+    },
+    {
+      "id": "q3",
+      "type": "direct",
+      "question": "Where is the JSON schema for settings validation defined?",
+      "ground_truth": [
+        "schemas/settings.schema.json"
+      ]
+    },
+    {
+      "id": "q4",
+      "type": "direct",
+      "question": "Which file implements the GeminiClient for API interactions?",
+      "ground_truth": [
+        "packages/core/src/core/gemini-client.ts"
+      ]
+    },
+    {
+      "id": "q5",
+      "type": "direct",
+      "question": "Where is the shell execution service implemented?",
+      "ground_truth": [
+        "packages/core/src/services/shell-execution/shell-execution.ts"
+      ]
+    },
+    {
+      "id": "q6",
+      "type": "direct",
+      "question": "Which file contains the tool registry and tool execution logic?",
+      "ground_truth": [
+        "packages/core/src/tools/tools.ts"
+      ]
+    },
+    {
+      "id": "q7",
+      "type": "direct",
+      "question": "Where is the git service utility implemented?",
+      "ground_truth": [
+        "packages/core/src/services/git-service.ts"
+      ]
+    },
+    {
+      "id": "q8",
+      "type": "direct",
+      "question": "Which file defines the policy engine for security policies?",
+      "ground_truth": [
+        "packages/core/src/policy/policy.ts"
+      ]
+    },
+    {
+      "id": "q9",
+      "type": "dependency",
+      "question": "What files are involved in the MCP (Model Context Protocol) implementation?",
+      "ground_truth": [
+        "packages/core/src/mcp/mcp-client.ts",
+        "packages/core/src/mcp/oauth-provider.ts",
+        "packages/core/src/mcp/types.ts",
+        "packages/core/src/mcp/mcp-tool-wrapper.ts",
+        "packages/core/src/mcp/mcp-commands.ts"
+      ]
+    },
+    {
+      "id": "q10",
+      "type": "dependency",
+      "question": "Which files implement the hooks system including registry, planner, and runner?",
+      "ground_truth": [
+        "packages/core/src/hooks/hooks.ts",
+        "packages/core/src/hooks/types.ts",
+        "packages/core/src/hooks/hook-planner.ts",
+        "packages/core/src/hooks/hook-runner.ts",
+        "packages/core/src/hooks/hook-aggregator.ts",
+        "packages/core/src/hooks/hook-translator.ts"
+      ]
+    },
+    {
+      "id": "q11",
+      "type": "dependency",
+      "question": "What are all the files related to agent delegation and the A2A protocol?",
+      "ground_truth": [
+        "packages/core/src/agents/agent-delegation.ts",
+        "packages/core/src/agents/types.ts",
+        "packages/core/src/agents/agent-tool-wrapper.ts",
+        "packages/a2a-server/src/agent/agent.ts",
+        "packages/a2a-server/src/http/server.ts"
+      ]
+    },
+    {
+      "id": "q12",
+      "type": "dependency",
+      "question": "Which files handle telemetry, logging, and observability?",
+      "ground_truth": [
+        "packages/core/src/telemetry/telemetry.ts",
+        "packages/core/src/telemetry/types.ts",
+        "packages/core/src/telemetry/activity-monitor.ts",
+        "packages/core/src/telemetry/memory-monitor.ts",
+        "packages/core/src/telemetry/otel-exporter.ts"
+      ]
+    },
+    {
+      "id": "q13",
+      "type": "dependency",
+      "question": "What files are responsible for session management including checkpointing and compression?",
+      "ground_truth": [
+        "packages/core/src/core/session.ts",
+        "packages/core/src/services/compression-service.ts",
+        "packages/core/src/core/checkpoint.ts",
+        "packages/cli/src/ui/components/SessionBrowser.tsx"
+      ]
+    },
+    {
+      "id": "q14",
+      "type": "dependency",
+      "question": "Which files implement the sandbox configuration and execution environment?",
+      "ground_truth": [
+        "packages/core/src/config/sandbox-config.ts",
+        "packages/core/src/services/shell-execution/sandboxed-shell.ts",
+        "packages/core/src/utils/docker-utils.ts"
+      ]
+    },
+    {
+      "id": "q15",
+      "type": "dependency",
+      "question": "What files are involved in error handling and quota management?",
+      "ground_truth": [
+        "packages/core/src/utils/errors.ts",
+        "packages/core/src/utils/errorParsing.ts",
+        "packages/core/src/utils/quotaErrorDetection.ts",
+        "packages/core/src/core/retry-logic.ts"
+      ]
+    },
+    {
+      "id": "q16",
+      "type": "dependency",
+      "question": "Which files handle token calculation and token limits for context management?",
+      "ground_truth": [
+        "packages/core/src/utils/tokenCalculation.ts",
+        "packages/core/src/utils/tokenLimits.ts",
+        "packages/core/src/core/content-generator.ts"
+      ]
+    },
+    {
+      "id": "q17",
+      "type": "feature",
+      "question": "Find all files related to the CLI user interface components and theming system.",
+      "ground_truth": [
+        "packages/cli/src/ui/components/App.tsx",
+        "packages/cli/src/ui/components/Chat.tsx",
+        "packages/cli/src/ui/components/MessageList.tsx",
+        "packages/cli/src/ui/components/InputBox.tsx",
+        "packages/cli/src/ui/themes/theme.ts",
+        "packages/cli/src/ui/contexts/SettingsContext.tsx",
+        "packages/cli/src/ui/layouts/MainLayout.tsx"
+      ]
+    },
+    {
+      "id": "q18",
+      "type": "feature",
+      "question": "What files implement the built-in tools system including file operations, shell, and web tools?",
+      "ground_truth": [
+        "packages/core/src/tools/tools.ts",
+        "packages/core/src/tools/file-tools.ts",
+        "packages/core/src/tools/shell-tool.ts",
+        "packages/core/src/tools/web-tools.ts",
+        "packages/core/src/tools/browser-tool.ts",
+        "packages/core/src/tools/edit-tool.ts",
+        "packages/core/src/tools/read-tool.ts",
+        "packages/core/src/tools/write-tool.ts"
+      ]
+    },
+    {
+      "id": "q19",
+      "type": "feature",
+      "question": "Find all files related to configuration management including settings, validation, and trusted folders.",
+      "ground_truth": [
+        "packages/core/src/config/config.ts",
+        "packages/cli/src/config/settings.ts",
+        "schemas/settings.schema.json",
+        "packages/core/src/config/trusted-folders.ts",
+        "packages/core/src/config/config-validator.ts"
+      ]
+    },
+    {
+      "id": "q20",
+      "type": "feature",
+      "question": "Which files are part of the VS Code IDE integration?",
+      "ground_truth": [
+        "packages/vscode-ide-companion/src/extension.ts",
+        "packages/vscode-ide-companion/src/diff-manager.ts",
+        "packages/vscode-ide-companion/src/file-operations.ts",
+        "packages/core/src/ide/ide-integration.ts",
+        "packages/core/src/tools/ide-tools.ts"
+      ]
+    },
+    {
+      "id": "q21",
+      "type": "feature",
+      "question": "What files implement the extension system for custom commands and features?",
+      "ground_truth": [
+        "packages/cli/src/config/extensions/extension-manager.ts",
+        "packages/cli/src/config/extensions/extension-loader.ts",
+        "packages/cli/src/config/extensions/extension-validator.ts",
+        "packages/cli/src/commands/extension-commands.ts"
+      ]
+    },
+    {
+      "id": "q22",
+      "type": "feature",
+      "question": "Find all files related to the build and release process.",
+      "ground_truth": [
+        "scripts/build.js",
+        "scripts/release.js",
+        "scripts/bundle.js",
+        "package.json",
+        ".github/workflows/release-nightly.yml",
+        ".github/workflows/release-preview.yml",
+        ".github/workflows/release-stable.yml"
+      ]
+    },
+    {
+      "id": "q23",
+      "type": "feature",
+      "question": "Which files handle file discovery, glob patterns, and gitignore parsing?",
+      "ground_truth": [
+        "packages/core/src/services/file-discovery-service.ts",
+        "packages/core/src/utils/fileUtils.ts",
+        "packages/core/src/utils/gitIgnoreParser.ts",
+        "packages/core/src/utils/pathReader.ts"
+      ]
+    },
+    {
+      "id": "q24",
+      "type": "feature",
+      "question": "What files are involved in the testing infrastructure and test utilities?",
+      "ground_truth": [
+        "packages/test-utils/src/index.ts",
+        "packages/test-utils/src/mocks.ts",
+        "packages/test-utils/src/fixtures.ts",
+        "integration-tests/vitest.config.ts",
+        "vitest.config.ts"
+      ]
+    },
+    {
+      "id": "q25",
+      "type": "refactoring",
+      "question": "If I need to add a new authentication method, which files would require changes?",
+      "ground_truth": [
+        "packages/core/src/code_assist/oauth2.ts",
+        "packages/core/src/core/apiKeyCredentialStorage.ts",
+        "packages/core/src/config/config.ts",
+        "packages/cli/src/commands/auth-commands.ts",
+        "packages/core/src/core/gemini-client.ts"
+      ]
+    },
+    {
+      "id": "q26",
+      "type": "refactoring",
+      "question": "What files would need to be modified to add a new built-in tool to the tools system?",
+      "ground_truth": [
+        "packages/core/src/tools/tools.ts",
+        "packages/core/src/tools/[new-tool].ts",
+        "packages/core/src/core/content-generator.ts",
+        "packages/core/src/policy/policy.ts",
+        "packages/core/src/hooks/types.ts"
+      ]
+    },
+    {
+      "id": "q27",
+      "type": "refactoring",
+      "question": "Which files would be affected if we need to change the session storage format?",
+      "ground_truth": [
+        "packages/core/src/core/session.ts",
+        "packages/core/src/core/checkpoint.ts",
+        "packages/core/src/services/compression-service.ts",
+        "packages/cli/src/ui/components/SessionBrowser.tsx",
+        "packages/core/src/utils/session-storage.ts"
+      ]
+    },
+    {
+      "id": "q28",
+      "type": "refactoring",
+      "question": "If we need to add a new telemetry metric, what files require updates?",
+      "ground_truth": [
+        "packages/core/src/telemetry/types.ts",
+        "packages/core/src/telemetry/telemetry.ts",
+        "packages/core/src/telemetry/otel-exporter.ts",
+        "packages/core/src/telemetry/activity-monitor.ts"
+      ]
+    },
+    {
+      "id": "q29",
+      "type": "refactoring",
+      "question": "What files would need changes to add a new UI theme to the CLI?",
+      "ground_truth": [
+        "packages/cli/src/ui/themes/theme.ts",
+        "packages/cli/src/config/settings.ts",
+        "schemas/settings.schema.json",
+        "packages/cli/src/ui/contexts/SettingsContext.tsx"
+      ]
+    },
+    {
+      "id": "q30",
+      "type": "refactoring",
+      "question": "Which files would be impacted by adding a new MCP server capability?",
+      "ground_truth": [
+        "packages/core/src/mcp/mcp-client.ts",
+        "packages/core/src/mcp/types.ts",
+        "packages/core/src/mcp/mcp-tool-wrapper.ts",
+        "packages/cli/src/commands/mcp-commands.ts",
+        "packages/core/src/tools/tools.ts"
+      ]
+    }
+  ]
+}

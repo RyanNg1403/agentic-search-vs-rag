@@ -1,0 +1,729 @@
+{
+  "approach": "RAG",
+  "model": "text-embedding-3-small",
+  "top_k": 5,
+  "aggregate_metrics": {
+    "avg_iou": 0.035555555555555556,
+    "avg_token_usage": 8775.4,
+    "avg_precision": 0.05333333333333334,
+    "avg_recall": 0.1075
+  },
+  "results": [
+    {
+      "question_id": "q1",
+      "question": "Where is the OAuth2 authentication flow implemented?",
+      "type": "direct",
+      "ground_truth": [
+        "packages/core/src/code_assist/oauth2.ts"
+      ],
+      "retrieved": [
+        "packages/core/src/mcp/token-storage/types.ts",
+        "packages/core/src/code_assist/oauth2.ts",
+        "packages/core/src/mcp/sa-impersonation-provider.ts",
+        "packages/core/src/mcp/google-auth-provider.ts",
+        "packages/core/src/mcp/oauth-provider.ts"
+      ],
+      "metrics": {
+        "iou": 0.2,
+        "token_usage": 13960,
+        "precision": 0.2,
+        "recall": 1.0
+      }
+    },
+    {
+      "question_id": "q2",
+      "question": "Which file contains the main CLI entry point with React/Ink rendering?",
+      "type": "direct",
+      "ground_truth": [
+        "packages/cli/src/gemini.tsx"
+      ],
+      "retrieved": [
+        ".gemini/commands/frontend.toml",
+        ".gemini/commands/full-context.toml",
+        "packages/cli/src/ui/layouts/DefaultAppLayout.tsx",
+        "packages/cli/src/ui/layouts/ScreenReaderAppLayout.tsx",
+        "packages/cli/src/ui/utils/CodeColorizer.tsx"
+      ],
+      "metrics": {
+        "iou": 0.0,
+        "token_usage": 4816,
+        "precision": 0.0,
+        "recall": 0.0
+      }
+    },
+    {
+      "question_id": "q3",
+      "question": "Where is the JSON schema for settings validation defined?",
+      "type": "direct",
+      "ground_truth": [
+        "schemas/settings.schema.json"
+      ],
+      "retrieved": [
+        "packages/cli/src/config/settings-validation.test.ts",
+        "packages/cli/src/config/settingsSchema.test.ts",
+        "packages/cli/src/config/settings-validation.ts",
+        "scripts/generate-settings-schema.ts",
+        "packages/core/src/utils/schemaValidator.ts"
+      ],
+      "metrics": {
+        "iou": 0.0,
+        "token_usage": 10242,
+        "precision": 0.0,
+        "recall": 0.0
+      }
+    },
+    {
+      "question_id": "q4",
+      "question": "Which file implements the GeminiClient for API interactions?",
+      "type": "direct",
+      "ground_truth": [
+        "packages/core/src/core/gemini-client.ts"
+      ],
+      "retrieved": [
+        "packages/cli/package.json",
+        "packages/a2a-server/package.json",
+        "packages/core/src/mcp/token-storage/index.ts",
+        "packages/vscode-ide-companion/package.json",
+        "packages/core/package.json"
+      ],
+      "metrics": {
+        "iou": 0.0,
+        "token_usage": 3910,
+        "precision": 0.0,
+        "recall": 0.0
+      }
+    },
+    {
+      "question_id": "q5",
+      "question": "Where is the shell execution service implemented?",
+      "type": "direct",
+      "ground_truth": [
+        "packages/core/src/services/shell-execution/shell-execution.ts"
+      ],
+      "retrieved": [
+        "packages/cli/src/ui/hooks/shellCommandProcessor.test.tsx",
+        "packages/core/src/tools/shell.test.ts",
+        "packages/cli/src/services/prompt-processors/shellProcessor.ts",
+        "packages/cli/src/ui/hooks/shellCommandProcessor.ts",
+        "packages/core/src/tools/shell.ts"
+      ],
+      "metrics": {
+        "iou": 0.0,
+        "token_usage": 17347,
+        "precision": 0.0,
+        "recall": 0.0
+      }
+    },
+    {
+      "question_id": "q6",
+      "question": "Which file contains the tool registry and tool execution logic?",
+      "type": "direct",
+      "ground_truth": [
+        "packages/core/src/tools/tools.ts"
+      ],
+      "retrieved": [
+        "packages/core/src/index.ts",
+        "packages/core/src/tools/tool-registry.ts",
+        "packages/core/src/tools/tool-registry.test.ts",
+        "packages/core/src/tools/tools.ts",
+        "packages/core/src/tools/tool-names.ts"
+      ],
+      "metrics": {
+        "iou": 0.2,
+        "token_usage": 14464,
+        "precision": 0.2,
+        "recall": 1.0
+      }
+    },
+    {
+      "question_id": "q7",
+      "question": "Where is the git service utility implemented?",
+      "type": "direct",
+      "ground_truth": [
+        "packages/core/src/services/git-service.ts"
+      ],
+      "retrieved": [
+        "packages/core/src/services/gitService.ts",
+        "packages/core/src/services/gitService.test.ts",
+        "packages/core/src/telemetry/constants.ts",
+        "packages/cli/src/utils/gitUtils.test.ts",
+        "packages/cli/src/ui/commands/setupGithubCommand.test.ts"
+      ],
+      "metrics": {
+        "iou": 0.0,
+        "token_usage": 7494,
+        "precision": 0.0,
+        "recall": 0.0
+      }
+    },
+    {
+      "question_id": "q8",
+      "question": "Which file defines the policy engine for security policies?",
+      "type": "direct",
+      "ground_truth": [
+        "packages/core/src/policy/policy.ts"
+      ],
+      "retrieved": [
+        "packages/core/src/policy/index.ts",
+        "packages/cli/src/config/policy-engine.integration.test.ts",
+        "packages/core/src/policy/config.ts",
+        "packages/cli/src/config/policy.ts",
+        "packages/core/src/availability/policyCatalog.ts"
+      ],
+      "metrics": {
+        "iou": 0.0,
+        "token_usage": 7761,
+        "precision": 0.0,
+        "recall": 0.0
+      }
+    },
+    {
+      "question_id": "q9",
+      "question": "What files are involved in the MCP (Model Context Protocol) implementation?",
+      "type": "dependency",
+      "ground_truth": [
+        "packages/core/src/mcp/mcp-client.ts",
+        "packages/core/src/mcp/oauth-provider.ts",
+        "packages/core/src/mcp/types.ts",
+        "packages/core/src/mcp/mcp-tool-wrapper.ts",
+        "packages/core/src/mcp/mcp-commands.ts"
+      ],
+      "retrieved": [
+        "packages/cli/src/commands/extensions/examples/mcp-server/package.json",
+        "packages/core/src/resources/resource-registry.ts",
+        "integration-tests/simple-mcp-server.test.ts",
+        "integration-tests/test-mcp-server.ts",
+        "packages/cli/src/commands/extensions/examples/mcp-server/example.ts"
+      ],
+      "metrics": {
+        "iou": 0.0,
+        "token_usage": 2901,
+        "precision": 0.0,
+        "recall": 0.0
+      }
+    },
+    {
+      "question_id": "q10",
+      "question": "Which files implement the hooks system including registry, planner, and runner?",
+      "type": "dependency",
+      "ground_truth": [
+        "packages/core/src/hooks/hooks.ts",
+        "packages/core/src/hooks/types.ts",
+        "packages/core/src/hooks/hook-planner.ts",
+        "packages/core/src/hooks/hook-runner.ts",
+        "packages/core/src/hooks/hook-aggregator.ts",
+        "packages/core/src/hooks/hook-translator.ts"
+      ],
+      "retrieved": [
+        "packages/core/src/hooks/hookSystem.ts",
+        "packages/core/src/hooks/hookPlanner.ts",
+        "packages/core/src/hooks/hookRegistry.ts",
+        "packages/core/src/hooks/index.ts",
+        "packages/core/src/hooks/hookPlanner.test.ts"
+      ],
+      "metrics": {
+        "iou": 0.0,
+        "token_usage": 6046,
+        "precision": 0.0,
+        "recall": 0.0
+      }
+    },
+    {
+      "question_id": "q11",
+      "question": "What are all the files related to agent delegation and the A2A protocol?",
+      "type": "dependency",
+      "ground_truth": [
+        "packages/core/src/agents/agent-delegation.ts",
+        "packages/core/src/agents/types.ts",
+        "packages/core/src/agents/agent-tool-wrapper.ts",
+        "packages/a2a-server/src/agent/agent.ts",
+        "packages/a2a-server/src/http/server.ts"
+      ],
+      "retrieved": [
+        "packages/core/src/agents/registry.ts",
+        "packages/core/src/agents/delegate-to-agent-tool.ts",
+        "packages/core/src/agents/types.ts",
+        "packages/core/src/agents/registry.test.ts",
+        "packages/core/src/agents/a2a-client-manager.ts"
+      ],
+      "metrics": {
+        "iou": 0.1111111111111111,
+        "token_usage": 9889,
+        "precision": 0.2,
+        "recall": 0.2
+      }
+    },
+    {
+      "question_id": "q12",
+      "question": "Which files handle telemetry, logging, and observability?",
+      "type": "dependency",
+      "ground_truth": [
+        "packages/core/src/telemetry/telemetry.ts",
+        "packages/core/src/telemetry/types.ts",
+        "packages/core/src/telemetry/activity-monitor.ts",
+        "packages/core/src/telemetry/memory-monitor.ts",
+        "packages/core/src/telemetry/otel-exporter.ts"
+      ],
+      "retrieved": [
+        "packages/core/src/telemetry/index.ts",
+        "packages/core/src/telemetry/loggers.ts",
+        "packages/core/src/index.ts",
+        "packages/core/src/telemetry/sdk.ts",
+        "scripts/telemetry_utils.js"
+      ],
+      "metrics": {
+        "iou": 0.0,
+        "token_usage": 12906,
+        "precision": 0.0,
+        "recall": 0.0
+      }
+    },
+    {
+      "question_id": "q13",
+      "question": "What files are responsible for session management including checkpointing and compression?",
+      "type": "dependency",
+      "ground_truth": [
+        "packages/core/src/core/session.ts",
+        "packages/core/src/services/compression-service.ts",
+        "packages/core/src/core/checkpoint.ts",
+        "packages/cli/src/ui/components/SessionBrowser.tsx"
+      ],
+      "retrieved": [
+        "packages/core/src/core/logger.test.ts",
+        "packages/core/src/services/sessionSummaryUtils.ts",
+        "packages/cli/src/utils/sessionCleanup.integration.test.ts",
+        "packages/cli/src/utils/sessionCleanup.ts",
+        "packages/core/src/core/logger.ts"
+      ],
+      "metrics": {
+        "iou": 0.0,
+        "token_usage": 14579,
+        "precision": 0.0,
+        "recall": 0.0
+      }
+    },
+    {
+      "question_id": "q14",
+      "question": "Which files implement the sandbox configuration and execution environment?",
+      "type": "dependency",
+      "ground_truth": [
+        "packages/core/src/config/sandbox-config.ts",
+        "packages/core/src/services/shell-execution/sandboxed-shell.ts",
+        "packages/core/src/utils/docker-utils.ts"
+      ],
+      "retrieved": [
+        "packages/cli/src/config/sandboxConfig.ts",
+        "packages/cli/src/config/sandboxConfig.test.ts",
+        "packages/cli/src/utils/sandboxUtils.test.ts",
+        "scripts/start.js",
+        "packages/cli/src/utils/sandbox.test.ts"
+      ],
+      "metrics": {
+        "iou": 0.0,
+        "token_usage": 7679,
+        "precision": 0.0,
+        "recall": 0.0
+      }
+    },
+    {
+      "question_id": "q15",
+      "question": "What files are involved in error handling and quota management?",
+      "type": "dependency",
+      "ground_truth": [
+        "packages/core/src/utils/errors.ts",
+        "packages/core/src/utils/errorParsing.ts",
+        "packages/core/src/utils/quotaErrorDetection.ts",
+        "packages/core/src/core/retry-logic.ts"
+      ],
+      "retrieved": [
+        "packages/core/src/availability/errorClassification.ts",
+        "packages/core/src/utils/errorParsing.ts",
+        "packages/core/src/utils/googleQuotaErrors.ts",
+        "packages/cli/src/utils/errors.ts",
+        "packages/core/src/utils/googleQuotaErrors.test.ts"
+      ],
+      "metrics": {
+        "iou": 0.125,
+        "token_usage": 8362,
+        "precision": 0.2,
+        "recall": 0.25
+      }
+    },
+    {
+      "question_id": "q16",
+      "question": "Which files handle token calculation and token limits for context management?",
+      "type": "dependency",
+      "ground_truth": [
+        "packages/core/src/utils/tokenCalculation.ts",
+        "packages/core/src/utils/tokenLimits.ts",
+        "packages/core/src/core/content-generator.ts"
+      ],
+      "retrieved": [
+        "packages/core/src/core/tokenLimits.ts",
+        "packages/core/src/core/tokenLimits.test.ts",
+        "packages/core/src/mcp/token-storage/file-token-storage.ts",
+        "packages/core/src/utils/tokenCalculation.test.ts",
+        "packages/core/src/mcp/oauth-token-storage.ts"
+      ],
+      "metrics": {
+        "iou": 0.0,
+        "token_usage": 4140,
+        "precision": 0.0,
+        "recall": 0.0
+      }
+    },
+    {
+      "question_id": "q17",
+      "question": "Find all files related to the CLI user interface components and theming system.",
+      "type": "feature",
+      "ground_truth": [
+        "packages/cli/src/ui/components/App.tsx",
+        "packages/cli/src/ui/components/Chat.tsx",
+        "packages/cli/src/ui/components/MessageList.tsx",
+        "packages/cli/src/ui/components/InputBox.tsx",
+        "packages/cli/src/ui/themes/theme.ts",
+        "packages/cli/src/ui/contexts/SettingsContext.tsx",
+        "packages/cli/src/ui/layouts/MainLayout.tsx"
+      ],
+      "retrieved": [
+        ".gemini/commands/full-context.toml",
+        ".gemini/commands/frontend.toml",
+        ".gemini/commands/core.toml",
+        "docs/sidebar.json",
+        "packages/cli/src/ui/colors.ts"
+      ],
+      "metrics": {
+        "iou": 0.0,
+        "token_usage": 4325,
+        "precision": 0.0,
+        "recall": 0.0
+      }
+    },
+    {
+      "question_id": "q18",
+      "question": "What files implement the built-in tools system including file operations, shell, and web tools?",
+      "type": "feature",
+      "ground_truth": [
+        "packages/core/src/tools/tools.ts",
+        "packages/core/src/tools/file-tools.ts",
+        "packages/core/src/tools/shell-tool.ts",
+        "packages/core/src/tools/web-tools.ts",
+        "packages/core/src/tools/browser-tool.ts",
+        "packages/core/src/tools/edit-tool.ts",
+        "packages/core/src/tools/read-tool.ts",
+        "packages/core/src/tools/write-tool.ts"
+      ],
+      "retrieved": [
+        "packages/core/src/index.ts",
+        "packages/cli/src/ui/commands/toolsCommand.ts",
+        "packages/core/src/tools/tool-names.ts",
+        "packages/core/src/tools/tools.ts",
+        "packages/cli/src/ui/commands/toolsCommand.test.ts"
+      ],
+      "metrics": {
+        "iou": 0.08333333333333333,
+        "token_usage": 7755,
+        "precision": 0.2,
+        "recall": 0.125
+      }
+    },
+    {
+      "question_id": "q19",
+      "question": "Find all files related to configuration management including settings, validation, and trusted folders.",
+      "type": "feature",
+      "ground_truth": [
+        "packages/core/src/config/config.ts",
+        "packages/cli/src/config/settings.ts",
+        "schemas/settings.schema.json",
+        "packages/core/src/config/trusted-folders.ts",
+        "packages/core/src/config/config-validator.ts"
+      ],
+      "retrieved": [
+        "packages/cli/src/config/trustedFolders.ts",
+        "packages/cli/src/config/config.integration.test.ts",
+        "packages/cli/src/config/settingsSchema.test.ts",
+        ".gemini/commands/core.toml",
+        "packages/cli/src/config/trustedFolders.test.ts"
+      ],
+      "metrics": {
+        "iou": 0.0,
+        "token_usage": 10076,
+        "precision": 0.0,
+        "recall": 0.0
+      }
+    },
+    {
+      "question_id": "q20",
+      "question": "Which files are part of the VS Code IDE integration?",
+      "type": "feature",
+      "ground_truth": [
+        "packages/vscode-ide-companion/src/extension.ts",
+        "packages/vscode-ide-companion/src/diff-manager.ts",
+        "packages/vscode-ide-companion/src/file-operations.ts",
+        "packages/core/src/ide/ide-integration.ts",
+        "packages/core/src/tools/ide-tools.ts"
+      ],
+      "retrieved": [
+        "packages/vscode-ide-companion/package.json",
+        "packages/core/src/ide/detect-ide.ts",
+        "packages/core/src/ide/detect-ide.test.ts",
+        ".gemini/commands/frontend.toml",
+        "packages/cli/src/ui/commands/ideCommand.ts"
+      ],
+      "metrics": {
+        "iou": 0.0,
+        "token_usage": 6430,
+        "precision": 0.0,
+        "recall": 0.0
+      }
+    },
+    {
+      "question_id": "q21",
+      "question": "What files implement the extension system for custom commands and features?",
+      "type": "feature",
+      "ground_truth": [
+        "packages/cli/src/config/extensions/extension-manager.ts",
+        "packages/cli/src/config/extensions/extension-loader.ts",
+        "packages/cli/src/config/extensions/extension-validator.ts",
+        "packages/cli/src/commands/extension-commands.ts"
+      ],
+      "retrieved": [
+        "packages/cli/src/commands/extensions/examples/custom-commands/gemini-extension.json",
+        "packages/cli/src/ui/commands/extensionsCommand.ts",
+        "packages/cli/src/commands/extensions.tsx",
+        "packages/a2a-server/src/commands/extensions.ts",
+        "packages/cli/src/services/FileCommandLoader.ts"
+      ],
+      "metrics": {
+        "iou": 0.0,
+        "token_usage": 6884,
+        "precision": 0.0,
+        "recall": 0.0
+      }
+    },
+    {
+      "question_id": "q22",
+      "question": "Find all files related to the build and release process.",
+      "type": "feature",
+      "ground_truth": [
+        "scripts/build.js",
+        "scripts/release.js",
+        "scripts/bundle.js",
+        "package.json",
+        ".github/workflows/release-nightly.yml",
+        ".github/workflows/release-preview.yml",
+        ".github/workflows/release-stable.yml"
+      ],
+      "retrieved": [
+        ".github/workflows/release-manual.yml",
+        ".github/workflows/release-patch-3-release.yml",
+        "scripts/check-build-status.js",
+        "packages/vscode-ide-companion/scripts/check-vscode-release.js",
+        "scripts/build_package.js"
+      ],
+      "metrics": {
+        "iou": 0.0,
+        "token_usage": 6059,
+        "precision": 0.0,
+        "recall": 0.0
+      }
+    },
+    {
+      "question_id": "q23",
+      "question": "Which files handle file discovery, glob patterns, and gitignore parsing?",
+      "type": "feature",
+      "ground_truth": [
+        "packages/core/src/services/file-discovery-service.ts",
+        "packages/core/src/utils/fileUtils.ts",
+        "packages/core/src/utils/gitIgnoreParser.ts",
+        "packages/core/src/utils/pathReader.ts"
+      ],
+      "retrieved": [
+        "packages/core/src/utils/gitIgnoreParser.ts",
+        "packages/core/src/utils/gitIgnoreParser.test.ts",
+        "packages/core/src/services/fileDiscoveryService.test.ts",
+        "packages/core/src/services/fileDiscoveryService.ts",
+        "packages/core/src/utils/ignorePatterns.ts"
+      ],
+      "metrics": {
+        "iou": 0.125,
+        "token_usage": 9041,
+        "precision": 0.2,
+        "recall": 0.25
+      }
+    },
+    {
+      "question_id": "q24",
+      "question": "What files are involved in the testing infrastructure and test utilities?",
+      "type": "feature",
+      "ground_truth": [
+        "packages/test-utils/src/index.ts",
+        "packages/test-utils/src/mocks.ts",
+        "packages/test-utils/src/fixtures.ts",
+        "integration-tests/vitest.config.ts",
+        "vitest.config.ts"
+      ],
+      "retrieved": [
+        "integration-tests/globalSetup.ts",
+        "integration-tests/list_directory.test.ts",
+        "packages/cli/vitest.config.ts",
+        ".github/workflows/ci.yml",
+        "packages/a2a-server/vitest.config.ts"
+      ],
+      "metrics": {
+        "iou": 0.0,
+        "token_usage": 5564,
+        "precision": 0.0,
+        "recall": 0.0
+      }
+    },
+    {
+      "question_id": "q25",
+      "question": "If I need to add a new authentication method, which files would require changes?",
+      "type": "refactoring",
+      "ground_truth": [
+        "packages/core/src/code_assist/oauth2.ts",
+        "packages/core/src/core/apiKeyCredentialStorage.ts",
+        "packages/core/src/config/config.ts",
+        "packages/cli/src/commands/auth-commands.ts",
+        "packages/core/src/core/gemini-client.ts"
+      ],
+      "retrieved": [
+        "packages/cli/src/config/auth.ts",
+        "packages/core/src/code_assist/oauth2.ts",
+        "packages/core/src/code_assist/oauth-credential-storage.test.ts",
+        "packages/core/src/mcp/google-auth-provider.ts",
+        "packages/cli/src/ui/auth/useAuth.ts"
+      ],
+      "metrics": {
+        "iou": 0.1111111111111111,
+        "token_usage": 9206,
+        "precision": 0.2,
+        "recall": 0.2
+      }
+    },
+    {
+      "question_id": "q26",
+      "question": "What files would need to be modified to add a new built-in tool to the tools system?",
+      "type": "refactoring",
+      "ground_truth": [
+        "packages/core/src/tools/tools.ts",
+        "packages/core/src/tools/[new-tool].ts",
+        "packages/core/src/core/content-generator.ts",
+        "packages/core/src/policy/policy.ts",
+        "packages/core/src/hooks/types.ts"
+      ],
+      "retrieved": [
+        "packages/core/src/tools/tools.ts",
+        "packages/core/src/tools/modifiable-tool.ts",
+        "packages/core/src/tools/write-file.ts",
+        "packages/cli/src/ui/commands/toolsCommand.ts",
+        "packages/core/src/tools/tool-names.ts"
+      ],
+      "metrics": {
+        "iou": 0.1111111111111111,
+        "token_usage": 10445,
+        "precision": 0.2,
+        "recall": 0.2
+      }
+    },
+    {
+      "question_id": "q27",
+      "question": "Which files would be affected if we need to change the session storage format?",
+      "type": "refactoring",
+      "ground_truth": [
+        "packages/core/src/core/session.ts",
+        "packages/core/src/core/checkpoint.ts",
+        "packages/core/src/services/compression-service.ts",
+        "packages/cli/src/ui/components/SessionBrowser.tsx",
+        "packages/core/src/utils/session-storage.ts"
+      ],
+      "retrieved": [
+        "packages/cli/src/utils/sessionCleanup.integration.test.ts",
+        "packages/cli/src/utils/sessions.test.ts",
+        "packages/core/src/services/sessionSummaryUtils.ts",
+        "packages/cli/src/utils/sessionUtils.ts",
+        "packages/cli/src/utils/sessionCleanup.ts"
+      ],
+      "metrics": {
+        "iou": 0.0,
+        "token_usage": 14075,
+        "precision": 0.0,
+        "recall": 0.0
+      }
+    },
+    {
+      "question_id": "q28",
+      "question": "If we need to add a new telemetry metric, what files require updates?",
+      "type": "refactoring",
+      "ground_truth": [
+        "packages/core/src/telemetry/types.ts",
+        "packages/core/src/telemetry/telemetry.ts",
+        "packages/core/src/telemetry/otel-exporter.ts",
+        "packages/core/src/telemetry/activity-monitor.ts"
+      ],
+      "retrieved": [
+        "packages/core/src/telemetry/index.ts",
+        "packages/core/src/telemetry/uiTelemetry.ts",
+        "packages/core/src/telemetry/metrics.ts",
+        "packages/core/src/telemetry/high-water-mark-tracker.test.ts",
+        "packages/core/src/telemetry/loggers.ts"
+      ],
+      "metrics": {
+        "iou": 0.0,
+        "token_usage": 16783,
+        "precision": 0.0,
+        "recall": 0.0
+      }
+    },
+    {
+      "question_id": "q29",
+      "question": "What files would need changes to add a new UI theme to the CLI?",
+      "type": "refactoring",
+      "ground_truth": [
+        "packages/cli/src/ui/themes/theme.ts",
+        "packages/cli/src/config/settings.ts",
+        "schemas/settings.schema.json",
+        "packages/cli/src/ui/contexts/SettingsContext.tsx"
+      ],
+      "retrieved": [
+        ".gemini/commands/frontend.toml",
+        "packages/cli/src/ui/commands/themeCommand.ts",
+        "packages/cli/src/ui/themes/theme-manager.test.ts",
+        "packages/cli/src/ui/themes/shades-of-purple.ts",
+        ".gemini/commands/full-context.toml"
+      ],
+      "metrics": {
+        "iou": 0.0,
+        "token_usage": 5891,
+        "precision": 0.0,
+        "recall": 0.0
+      }
+    },
+    {
+      "question_id": "q30",
+      "question": "Which files would be impacted by adding a new MCP server capability?",
+      "type": "refactoring",
+      "ground_truth": [
+        "packages/core/src/mcp/mcp-client.ts",
+        "packages/core/src/mcp/types.ts",
+        "packages/core/src/mcp/mcp-tool-wrapper.ts",
+        "packages/cli/src/commands/mcp-commands.ts",
+        "packages/core/src/tools/tools.ts"
+      ],
+      "retrieved": [
+        "packages/cli/src/commands/extensions/examples/mcp-server/gemini-extension.json",
+        "packages/cli/src/commands/mcp/list.ts",
+        "packages/core/src/resources/resource-registry.ts",
+        "packages/cli/src/commands/mcp.ts",
+        "packages/core/src/tools/mcp-client-manager.ts"
+      ],
+      "metrics": {
+        "iou": 0.0,
+        "token_usage": 4232,
+        "precision": 0.0,
+        "recall": 0.0
+      }
+    }
+  ]
+}

@@ -1,0 +1,57 @@
+{
+  "experiment": {
+    "total_questions": 30,
+    "rag_model": "text-embedding-3-small",
+    "agentic_tool": "brv query"
+  },
+  "aggregate_comparison": {
+    "rag": {
+      "avg_iou": 0.035555555555555556,
+      "avg_token_usage": 8775.4,
+      "avg_precision": 0.05333333333333334,
+      "avg_recall": 0.1075
+    },
+    "agentic": {
+      "avg_iou": 0.07338744588744589,
+      "avg_token_usage": 72.2,
+      "avg_precision": 0.11666666666666667,
+      "avg_recall": 0.09749999999999999
+    },
+    "improvements": {
+      "iou_improvement_pct": 106.40219155844157,
+      "token_reduction_pct": 99.17724548168744,
+      "precision_improvement_pct": 118.74999999999997,
+      "recall_improvement_pct": -9.302325581395356
+    }
+  },
+  "by_question_type": {
+    "feature": {
+      "count": 8,
+      "rag_avg_iou": 0.026041666666666664,
+      "agentic_avg_iou": 0.03636363636363636,
+      "rag_avg_tokens": 7016.75,
+      "agentic_avg_tokens": 56.375
+    },
+    "direct": {
+      "count": 8,
+      "rag_avg_iou": 0.05,
+      "agentic_avg_iou": 0.1875,
+      "rag_avg_tokens": 9999.25,
+      "agentic_avg_tokens": 47.5
+    },
+    "refactoring": {
+      "count": 6,
+      "rag_avg_iou": 0.037037037037037035,
+      "agentic_avg_iou": 0.047619047619047616,
+      "rag_avg_tokens": 10105.333333333334,
+      "agentic_avg_tokens": 134.83333333333334
+    },
+    "dependency": {
+      "count": 8,
+      "rag_avg_iou": 0.029513888888888888,
+      "agentic_avg_iou": 0.015625,
+      "rag_avg_tokens": 8312.75,
+      "agentic_avg_tokens": 65.75
+    }
+  }
+}

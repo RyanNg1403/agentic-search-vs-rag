@@ -1,0 +1,13 @@
+# Vector Database
+qdrant-client
+
+# OpenAI API
+openai
+
+# Utilities
+tiktoken
+tqdm
+python-dotenv
+
+# Visualization
+matplotlib
