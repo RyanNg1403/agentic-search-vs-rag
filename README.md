@@ -108,4 +108,4 @@ See [REPRODUCTION.md](REPRODUCTION.md) for detailed setup and reproduction instr
 
 ## License
 
-MIT License - See LICENSE file for details
+MIT License
