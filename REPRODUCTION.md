@@ -15,7 +15,7 @@ This guide provides detailed instructions to reproduce the RAG vs Agentic Search
 ### 1. Clone Repository and Codebase
 
 ```bash
-git clone <this-repo>
+git clone https://github.com/RyanNg1403/agentic-search-vs-rag.git
 cd agentic-search-vs-rag
 
 # Clone the target codebase
