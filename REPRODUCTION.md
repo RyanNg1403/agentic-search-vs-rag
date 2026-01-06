@@ -2,6 +2,44 @@
 
 Complete step-by-step instructions to reproduce the RAG vs Agentic Search experiment.
 
+## What's Inside
+
+This repository provides:
+- 30 carefully designed evaluation questions with ground truth
+- Complete RAG pipeline (OpenAI embeddings + Qdrant)
+- Complete Agentic Search pipeline (ByteRover CLI)
+- Automated comparison and visualization scripts
+- Pre-curated context tree for reproducibility
+
+## Repository Structure
+
+```
+.
+├── README.md                      # Overview and quick links
+├── RESULTS.md                     # Detailed experimental findings
+├── REPRODUCTION.md                # This file - reproduction guide
+├── questions.json                 # 30 evaluation questions
+├── context-tree/                  # Pre-curated knowledge base
+├── rag_pipeline.py                # RAG implementation
+├── agentic_pipeline.py            # Agentic search implementation
+├── compare_results.py             # Metrics calculation
+├── visualize_results.py           # Chart generation
+└── gemini-cli/                    # Target codebase (clone separately)
+```
+
+## Quick Start
+
+```bash
+# 1. Clone and setup
+git clone https://github.com/RyanNg1403/agentic-search-vs-rag.git
+cd agentic-search-vs-rag
+
+# 2. Run automated experiment
+./run_experiment.sh
+```
+
+For detailed step-by-step instructions, continue reading below.
+
 ## Prerequisites
 
 - Python 3.8+
